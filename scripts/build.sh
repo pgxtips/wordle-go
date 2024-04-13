@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Stop existing Go app process
+pkill app
+
 # Install npm dependencies
 # npm install
 
