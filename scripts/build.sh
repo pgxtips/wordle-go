@@ -27,13 +27,21 @@ find app/internal/views -type f -name "*.html" -exec sh -c '
     cp "$src_path" "$dest_dir"
 ' _ {} \;
 
-#cp app/internal/views/*.html build/internal/views/
-
 # CSS
 # Extract all css files and put them in static/css
 mkdir -p build/static/css
-cp app/internal/views/*.css build/static/css/
+find app/internal/views -type f -name "*.css" -exec sh -c '
+    src_path="$1"
+    dest_dir="build/static/css/${src_path#app/internal/views/}"
+    dest_dir="${dest_dir%/*}" # Remove the filename from the path
+    mkdir -p "$dest_dir"
+    cp "$src_path" "$dest_dir"
+' _ {} \;
 
+# JS Libraries 
+# Jquery
+mkdir -p build/static/js-libs/jquery
+cp node_modules/jquery/dist/jquery.min.js build/static/js-libs/jquery/
 
 # Build go
 # first cd into app then run go build
