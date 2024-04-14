@@ -6,15 +6,17 @@ import (
     "app/internal/api/controllers"
 )
 
-func RegisterServices(router *http.ServeMux){
-    // GET SERVICES
+func RegisterGetServices(router *http.ServeMux){
     router.HandleFunc("/", controllers.GamePageHandler) 
+}
+
+func RegisterPostServices(router *http.ServeMux){
 }
 
 func ServerStart(){
 
     router := http.NewServeMux()
-    RegisterServices(router)
+    RegisterGetServices(router)
 
     fs := http.FileServer(http.Dir("static/"))
     router.Handle("/static/", http.StripPrefix("/static/", fs))
