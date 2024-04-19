@@ -1,0 +1,79 @@
+.header{
+    height: 18vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.header #header-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    height: 76vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.content #content-main #game-grid{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    justify-items: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.content #content-main #game-grid .row{
+    display: grid;
+    grid-template-columns: 60px 60px 60px 60px 60px;
+    justify-items: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.content #content-main #game-grid .square{
+    width: 60px;
+    height: 60px;
+    border: solid black 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.content #content-main #game-input{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr; 
+    margin-top: 5px;
+}
+
+.content #content-main #game-input .input-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    margin-top: 2px;
+}
+
+.content #content-main #game-input .input-row .input-letter{
+    width: 30px;
+    height: 30px;
+    border: solid black 1px;
+    text-align: center;
+}
+
+.content #content-main #game-input .input-row #input-enter{
+    width: 50px;
+    height: 30px;
+    border: solid black 1px;
+    text-align: center;
+}
+
+.content #content-main #game-input .input-row #input-del{
+    width: 40px;
+    height: 30px;
+    border: solid black 1px;
+    text-align: center;
+}
+

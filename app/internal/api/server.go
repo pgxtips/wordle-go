@@ -4,22 +4,27 @@ import (
     "log"
     "net/http"
     "app/internal/api/controllers"
+    "app/internal/api/middleware"
 )
 
 func RegisterGetServices(router *http.ServeMux){
-    router.HandleFunc("/", controllers.GamePageHandler) 
+    finalHandler := http.HandlerFunc(controllers.GamePageHandler)
+    router.Handle("/", middleware.PreProcess(finalHandler)) 
 }
 
 func RegisterPostServices(router *http.ServeMux){
+    router.HandleFunc("/api/post", controllers.PostHandler) 
 }
 
 func ServerStart(){
 
     router := http.NewServeMux()
-    RegisterGetServices(router)
 
     fs := http.FileServer(http.Dir("static/"))
     router.Handle("/static/", http.StripPrefix("/static/", fs))
+
+    RegisterGetServices(router)
+    RegisterPostServices(router)
 
     log.Println("Starting Server on port 8080")
 

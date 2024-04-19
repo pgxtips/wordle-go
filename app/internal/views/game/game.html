@@ -4,10 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Wordle Go</title>
+    <link rel="stylesheet" href="/static/css/global.css">
+    <link rel="stylesheet" href="/static/css/game/game.css">
+    <script src="/static/js-libs/jquery/jquery.min.js"></script>
+	<script src="/static/js/game/game_poster.js"></script>
+	<script src="/static/js/game/game_redeemer.js"></script>
+	<script src="/static/js/game/game.js"></script>
   </head>
   <body>
-	<script src="index.js"></script>
+      <div class="header">
+          <div id="header-empty"></div>
+          <div id="header-text">
+              <h1>Wordle Go</h1>
+          </div>
+          <div id="header-login"></div>
+      </div> 
+
+      <div class="content">
+          <div id="content-empty"></div>
+          <div id="content-main">
+              <div id="game-grid">
+                  <div id="row1" class="row">
+                      <div id="row1-square1" class="square"></div>
+                      <div id="row1-square2" class="square"></div>
+                      <div id="row1-square3" class="square"></div>
+                      <div id="row1-square4" class="square"></div>
+                      <div id="row1-square5" class="square"></div>
+                  </div>
+                  <div id="row2" class="row">
+                      <div id="row2-square1" class="square"></div>
+                      <div id="row2-square2" class="square"></div>
+                      <div id="row2-square3" class="square"></div>
+                      <div id="row2-square4" class="square"></div>
+                      <div id="row2-square5" class="square"></div>
+                  </div>
+                  <div id="row3" class="row">
+                      <div id="row3-square1" class="square"></div>
+                      <div id="row3-square2" class="square"></div>
+                      <div id="row3-square3" class="square"></div>
+                      <div id="row3-square4" class="square"></div>
+                      <div id="row3-square5" class="square"></div>
+                  </div>
+                  <div id="row4" class="row">
+                      <div id="row4-square1" class="square"></div>
+                      <div id="row4-square2" class="square"></div>
+                      <div id="row4-square3" class="square"></div>
+                      <div id="row4-square4" class="square"></div>
+                      <div id="row4-square5" class="square"></div>
+                  </div>
+                  <div id="row5" class="row">
+                      <div id="row5-square1" class="square"></div>
+                      <div id="row5-square2" class="square"></div>
+                      <div id="row5-square3" class="square"></div>
+                      <div id="row5-square4" class="square"></div>
+                      <div id="row5-square5" class="square"></div>
+                  </div>
+                  <div id="row6" class="row">
+                      <div id="row6-square1" class="square"></div>
+                      <div id="row6-square2" class="square"></div>
+                      <div id="row6-square3" class="square"></div>
+                      <div id="row6-square4" class="square"></div>
+                      <div id="row6-square5" class="square"></div>
+                  </div>
+              </div>
+
+              <div id="game-input">
+                  <div class="input-row" id="input-row1">
+                      <div class="input-letter" id="input-q">q</div>
+                      <div class="input-letter" id="input-w">w</div>
+                      <div class="input-letter" id="input-e">e</div>
+                      <div class="input-letter" id="input-r">r</div>
+                      <div class="input-letter" id="input-t">t</div>
+                      <div class="input-letter" id="input-y">y</div>
+                      <div class="input-letter" id="input-u">u</div>
+                      <div class="input-letter" id="input-i">i</div>
+                      <div class="input-letter" id="input-o">o</div>
+                      <div class="input-letter" id="input-p">p</div>
+                  </div>
+
+                  <div class="input-row" id="input-row2">
+                      <div class="input-letter" id="input-a">a</div>
+                      <div class="input-letter" id="input-s">s</div>
+                      <div class="input-letter" id="input-d">d</div>
+                      <div class="input-letter" id="input-f">f</div>
+                      <div class="input-letter" id="input-g">g</div>
+                      <div class="input-letter" id="input-h">h</div>
+                      <div class="input-letter" id="input-j">j</div>
+                      <div class="input-letter" id="input-k">k</div>
+                      <div class="input-letter" id="input-l">l</div>
+                  </div>
+
+                  <div class="input-row" id="input-row3">
+                      <div class="input-letter" id="input-enter">enter</div>
+                      <div class="input-letter" id="input-z">z</div>
+                      <div class="input-letter" id="input-x">x</div>
+                      <div class="input-letter" id="input-c">c</div>
+                      <div class="input-letter" id="input-v">v</div>
+                      <div class="input-letter" id="input-b">b</div>
+                      <div class="input-letter" id="input-n">n</div>
+                      <div class="input-letter" id="input-m">m</div>
+                      <div class="input-letter" id="input-del">del</div>
+                  </div>
+              </div>
+
+          </div>
+          <div id="content-empty"></div>
+      </div> 
+
   </body>
 </html>

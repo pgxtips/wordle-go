@@ -6,6 +6,7 @@ import (
 )
 
 func GamePageHandler(w http.ResponseWriter, r *http.Request){
+
    template, err := template.ParseFiles("internal/views/game/game.html") 
 
    if err != nil {
